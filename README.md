@@ -2,7 +2,6 @@
 
 <img src="https://github.com/canopas/VideoTrimView/blob/VideTrim/screenshot/Feb-05-2021%2009-50-41.gif" alt="VideoTrimmer Screenshot" width="360" height="640" />
 
-## [Watch a DEMO here](http://gfycat.com/UnnaturalConsiderateFiddlercrab)
 
 # Usage
 
