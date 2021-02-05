@@ -1,8 +1,15 @@
-# VideoTrimmer - A library with UI and mechanisms to trim local videos on Android applications.
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/knowledge4life/k4l-video-trimmer.svg)](https://github.com/knowledge4life/k4l-video-trimmer/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/knowledge4life/k4l-video-trimmer.svg)](https://github.com/knowledge4life/k4l-video-trimmer/network)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-VideoTrimmer-green.svg?style=true)](https://android-arsenal.com/details/1/3714)
+
+# VideoTrimmer
 
 #### This project aims to provide an ultimate and flexible video trimmer experience.
 
-<img src="https://github.com/knowledge4life/k4l-video-trimmer/raw/master/Screenshots/Screenshot.png" alt="VideoTrimmer Screenshot" width="400" height="568" />
+<img src="https://raw.githubusercontent.com/knowledge4life/k4l-video-trimmer/master/screenshot/screenshot.png" alt="VideoTrimmer Screenshot" width="360" height="640" />
+
+## [Watch a DEMO here](http://gfycat.com/UnnaturalConsiderateFiddlercrab)
 
 # Usage
 
@@ -31,9 +38,7 @@
     ```
 
 # Default destination folder
-    ```java
     Environment.getExternalStorageDirectory()
-    ```
 
 # Here is an example of a listener implementation.
 
@@ -74,12 +79,34 @@
 - Thumbnails are only added to the timeline once all of them are created in a background thread
 - As for now there is no way of personalising the component
 - We only support MP4 files
-- Methods count: 5768 from Isoparser + [CHECK HOW MANY METHODS THERE ARE IN OUR LIB] from K4l-video-trimmer
+- Methods count: 5768 from Isoparser + 237 from K4l-video-trimmer
     
 # Compatibility
   
   * Library - Android ICS 4.1+ (API 16)
   * Sample - Android ICS 4.1+ (API 16)
+  
+# Using SNAPSHOTS
+  
+ Add the sonatype snapshots repository.
+  ```
+  'https://oss.sonatype.org/content/repositories/snapshots/'
+  ```
+  Example: 
+  ```
+  repositories{
+    flatDir{
+        dirs 'libs'
+    }
+    maven {
+        url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+  }
+  ```
+  Then:
+  ```
+  compile 'life.knowledge4:k4l-video-trimmer:1.1.3-SNAPSHOT'
+  ```
 
 ## Collaboration
 There are many ways of improving and adding more features, so feel free to collaborate with ideas, issues and/or pull requests.  

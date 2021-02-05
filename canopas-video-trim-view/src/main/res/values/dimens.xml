@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VIDEO TRIMMER-->
+    <dimen name="progress_video_line_height">2dp</dimen>
+    <dimen name="thumb_width">14dp</dimen>
+    <dimen name="thumb_height">55dp</dimen>
+    <dimen name="thumb_indicator_width">6dp</dimen>
+    <dimen name="thumb_indicator_height">12dp</dimen>
+
+    <dimen name="frames_video_height">55dip</dimen>
+    <dimen name="frames_video_width">30dip</dimen>
+
+</resources>

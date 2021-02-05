@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingBottom="4dp">
+
+        <com.canopas.trimview.view.TimeLineView
+            android:id="@+id/timeLineView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/handlerTop"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:max="1000"
+            android:progressDrawable="@android:color/transparent"
+            android:secondaryProgress="0"
+            android:thumb="@drawable/ic_seekbar_line"
+            android:visibility="visible" />
+
+        <com.canopas.trimview.view.RangeSeekBarView
+            android:id="@+id/timeLineBar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center|bottom" />
+    </FrameLayout>
+
+    <com.canopas.trimview.view.ProgressBarView
+        android:id="@+id/timeVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>

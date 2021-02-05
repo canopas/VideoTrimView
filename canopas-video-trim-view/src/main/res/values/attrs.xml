@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="K4LVideoTrimmer">
+        <attr name="thumbTint" format="color" />
+        <attr name="progressShadowColor" format="color" />
+    </declare-styleable>
+</resources>
