@@ -8,7 +8,7 @@
 *For a working implementation, please have a look at the [Sample Project](https://github.com/canopas/VideoTrimView/tree/VideTrim/sample-app)
 1. Add the dependency.
 
-    ```  implementation 'com.github.canopas:VideoTrimView:1.0.2' ```
+    ```  implementation 'com.github.canopas:VideoTrimView:1.0.3' ```
     
 2. Add VideoTrimView view into your layout.
 
