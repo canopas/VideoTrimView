@@ -217,6 +217,11 @@ class VideoTrimView @JvmOverloads constructor(context: Context, attrs: Attribute
         mTimeLineView.setVideo(videoURI)
     }
 
+    fun setRange(starMs: Int, endMs: Int) {
+        mStartPosition = starMs
+        mEndPosition = endMs
+    }
+
     fun stopProgress() {
         progressHandler.removeCallbacks(progressRunnable)
     }
