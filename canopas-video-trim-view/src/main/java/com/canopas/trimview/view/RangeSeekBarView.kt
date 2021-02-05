@@ -41,10 +41,10 @@ class RangeSeekBarView @JvmOverloads constructor(context: Context, attrs: Attrib
     private val mThumbPaint = Paint()
 
     init {
-        val styleAttrs = context.theme.obtainStyledAttributes(attrs, R.styleable.K4LVideoTrimmer, 0, 0)
-        @ColorInt val progressShadowColor = styleAttrs.getColor(R.styleable.K4LVideoTrimmer_progressShadowColor,
+        val styleAttrs = context.theme.obtainStyledAttributes(attrs, R.styleable.VideoTrimView, 0, 0)
+        @ColorInt val progressShadowColor = styleAttrs.getColor(R.styleable.VideoTrimView_progressShadowColor,
                 resources.getColor(R.color.shadow_color))
-        @ColorInt val thumbColor = styleAttrs.getColor(R.styleable.K4LVideoTrimmer_thumbTint,
+        @ColorInt val thumbColor = styleAttrs.getColor(R.styleable.VideoTrimView_thumbTint,
                 resources.getColor(R.color.thumb_color))
 
         setShadowColor(progressShadowColor)

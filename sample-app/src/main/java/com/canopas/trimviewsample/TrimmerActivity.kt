@@ -9,13 +9,13 @@ import android.widget.RelativeLayout
 import android.widget.Toast
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
-import com.canopas.trimview.K4LVideoTrimmer
+import com.canopas.trimview.VideoTrimView
 import com.canopas.trimview.interfaces.TrimViewListener
 import com.canopas.videotrimmersample.databinding.ActivityTrimmerBinding
 
 class TrimmerActivity : AppCompatActivity(), TrimViewListener {
     private lateinit var binding: ActivityTrimmerBinding
-    private lateinit var mVideoTrimmer: K4LVideoTrimmer
+    private lateinit var mVideoTrimView: VideoTrimView
     private lateinit var mLinearVideo: RelativeLayout
     private lateinit var mVideoView: VideoView
     private lateinit var mPlayView: ImageView
@@ -31,7 +31,7 @@ class TrimmerActivity : AppCompatActivity(), TrimViewListener {
         mLinearVideo = binding.videoContainerView
         mVideoView = binding.videoLoader
         mPlayView = binding.iconVideoPlay
-        mVideoTrimmer = binding.timeLine
+        mVideoTrimView = binding.timeLine
 
         val path: String = intent?.getStringExtra(EXTRA_VIDEO_PATH) ?: ""
 
@@ -43,11 +43,11 @@ class TrimmerActivity : AppCompatActivity(), TrimViewListener {
         mVideoView.setOnClickListener { onClickVideoPlayPause() }
         mVideoView.setOnPreparedListener { mp -> onVideoPrepared(mp) }
         mVideoView.setOnCompletionListener { onVideoCompleted() }
-        mVideoTrimmer.setOnK4LVideoListener(this)
+        mVideoTrimView.setVideoTrimViewListener(this)
 
         mVideoView.setVideoURI(Uri.parse(path))
         mVideoView.requestFocus()
-        mVideoTrimmer.setVideoURI(Uri.parse(path))
+        mVideoTrimView.setVideoURI(Uri.parse(path))
 
     }
 
@@ -58,7 +58,7 @@ class TrimmerActivity : AppCompatActivity(), TrimViewListener {
     private fun onClickVideoPlayPause() {
         if (mVideoView.isPlaying) {
             mPlayView.visibility = View.VISIBLE
-            mVideoTrimmer.stopProgress()
+            mVideoTrimView.stopProgress()
             mVideoView.pause()
         } else {
             mPlayView.visibility = View.GONE
@@ -66,7 +66,7 @@ class TrimmerActivity : AppCompatActivity(), TrimViewListener {
                 mResetSeekBar = false
                 mVideoView.seekTo(mStartPosition)
             }
-            mVideoTrimmer.startProgress()
+            mVideoTrimView.startProgress()
             mVideoView.start()
         }
     }
@@ -91,7 +91,7 @@ class TrimmerActivity : AppCompatActivity(), TrimViewListener {
         mVideoView.layoutParams = lp
 
         mPlayView.visibility = View.VISIBLE
-        mVideoTrimmer.setDuration(mVideoView.duration)
+        mVideoTrimView.setDuration(mVideoView.duration)
     }
 
     private fun cancelAction() {

@@ -65,7 +65,7 @@
 
     </RelativeLayout>
 
-    <com.canopas.trimview.K4LVideoTrimmer
+    <com.canopas.trimview.VideoTrimView
         android:id="@+id/timeLine"
         android:layout_width="match_parent"
         android:layout_height="70dp"

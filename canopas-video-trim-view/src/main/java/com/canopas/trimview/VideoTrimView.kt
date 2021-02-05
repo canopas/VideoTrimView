@@ -17,7 +17,7 @@ import com.canopas.trimview.view.RangeSeekBarView
 import com.canopas.trimview.view.Thumb
 import com.canopas.trimview.view.TimeLineView
 
-class K4LVideoTrimmer @JvmOverloads constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) :
+class VideoTrimView @JvmOverloads constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) :
         FrameLayout(context, attrs, defStyleAttr) {
 
     private var mHolderTopView: SeekBar
@@ -202,10 +202,10 @@ class K4LVideoTrimmer @JvmOverloads constructor(context: Context, attrs: Attribu
     /**
      * Listener for events
      *
-     * @param onK4LVideoListener interface for events
+     * @param trimViewListener interface for events
      */
-    fun setOnK4LVideoListener(onK4LVideoListener: TrimViewListener) {
-        mTrimViewListener = onK4LVideoListener
+    fun setVideoTrimViewListener(trimViewListener: TrimViewListener) {
+        mTrimViewListener = trimViewListener
     }
 
     /**
