@@ -5,7 +5,7 @@
 
 # Usage
 
-*For a working implementation, please have a look at the Sample Project - sample*
+*For a working implementation, please have a look at the [Sample Project](https://github.com/canopas/VideoTrimView/tree/VideTrim/sample-app)
 1. Add the dependency.
 
     ```  implementation 'com.github.canopas:VideoTrimView:1.0.1' ```
