@@ -14,7 +14,7 @@
 
     ```
       <com.canopas.trimview.VideoTrimView
-        android:id="@+id/timeLine"
+        android:id="@+id/trimView"
         android:layout_width="match_parent"
         android:layout_height="70dp"/>
 
@@ -23,5 +23,5 @@
 3. Set the video Uri.
 
     ```java
-        videoTrimmer.setVideoURI(Uri.parse(path));
+        trimView.setVideoURI(Uri.parse(path));
     ```
