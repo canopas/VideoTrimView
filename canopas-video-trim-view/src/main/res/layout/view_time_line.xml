@@ -19,7 +19,7 @@
         <SeekBar
             android:id="@+id/handlerTop"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="@dimen/frames_video_height"
             android:layout_gravity="center_horizontal"
             android:max="1000"
             android:progressDrawable="@android:color/transparent"
@@ -30,7 +30,7 @@
         <com.canopas.trimview.view.RangeSeekBarView
             android:id="@+id/timeLineBar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="@dimen/frames_video_height"
             android:layout_gravity="center|bottom" />
     </FrameLayout>
 
